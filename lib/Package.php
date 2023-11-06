@@ -16,7 +16,8 @@ class Package implements ArrayAccess {
 	private array $data;
 
 	private function __construct() {
-		$this->data = json_decode(file_get_contents(MICHEALPEARCEDEV_THEME_PATH . 'package.json'), true);
+		$pkg_path = resolvePath('/package.json');
+		$this->data = json_decode(file_get_contents($pkg_path), true);
 	}
 
 	public function offsetExists(mixed $offset): bool {

@@ -2,6 +2,9 @@
   "name": "michealpearcedev/theme",
   "type": "project",
   "autoload": {
+	"files": [
+	  "lib/functions.php"
+	],
 	"psr-4": {
 	  "MichealPearce\\Theme\\": "lib/"
 	}
