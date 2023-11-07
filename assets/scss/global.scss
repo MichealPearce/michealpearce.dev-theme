@@ -3,14 +3,14 @@
 
 :root {
   --color-white: white;
-  --color-black: black;
+  --color-black: #212121;
 
   --border-radius: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-	--color-white: black;
+	--color-white: #212121;
 	--color-black: white;
   }
 }
