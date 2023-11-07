@@ -1,0 +1,76 @@
+@import 'sassy';
+@import 'reset';
+
+:root {
+  --color-white: white;
+  --color-black: black;
+
+  --border-radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+	--color-white: black;
+	--color-black: white;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Source Code Pro', monospace;
+  font-size: medium;
+
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5em;
+}
+
+h1, .h1 {
+  font-size: 2em;
+}
+
+h2, .h2 {
+  font-size: 1.5em;
+}
+
+h3, .h3 {
+  font-size: 1.17em;
+}
+
+h4, .h4 {
+  font-size: 1em;
+}
+
+h5, .h5 {
+  font-size: 0.83em;
+}
+
+h6, .h6 {
+  font-size: 0.67em;
+}
+
+.articles {
+  @include flex(column, flex-start, center);
+  gap: 2em;
+  width: 100%;
+  padding: 1em;
+}
+
+.single-post {
+  @include flex(column, flex-start, center);
+  width: 100%;
+}
+
+@import 'blocks';
+@import 'components/link';
+@import 'components/site-header';
+
+@import 'components/article';
+@import 'components/article/card';

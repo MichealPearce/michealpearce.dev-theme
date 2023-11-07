@@ -1,0 +1,19 @@
+.site-header {
+  @include flex(row, center, center);
+  width: 100%;
+  padding: 1em;
+
+  .site-title {
+	text-decoration: none;
+  }
+
+  .site-navigation {
+	.navigation-menu {
+	  @include flex();
+
+	  .link {
+		padding: 1em;
+	  }
+	}
+  }
+}

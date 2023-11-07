@@ -1,0 +1,64 @@
+.wp-block-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius);
+
+  img {
+	display: block;
+	width: 100%;
+	border-radius: var(--border-radius);
+  }
+
+  figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em;
+	transform-style: preserve-3d;
+	color: white;
+
+	&::before {
+	  content: '';
+	  width: 100%;
+	  height: 100%;
+
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+
+	  background-color: rgba(0, 0, 0, 0.5);
+	  backdrop-filter: blur(5px);
+	  transform: translateZ(-1px);
+	  border-radius: var(--border-radius);
+	}
+  }
+}
+
+.wp-block-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1em;
+  width: 100%;
+}
+
+.wp-block-quote {
+  @include flex(column, center, center);
+  gap: 1em;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1em;
+  border-radius: var(--border-radius);
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  cite {
+	font-size: 0.75em;
+  }
+}
+
+.wp-block-code {
+  width: 100%;
+  margin: 0;
+}

@@ -1,3 +1,16 @@
-<?php get_header(); ?>
-<h1>Hello, World!</h1>
+<?php use function MichealPearce\Theme\template;
+
+get_header(); ?>
+
+<div class="articles">
+	<?php while (have_posts()) {
+		the_post();
+		global $post;
+
+		template('article/card', [
+			'article' => $post
+		]);
+	} ?>
+</div>
+
 <?php get_footer(); ?>
