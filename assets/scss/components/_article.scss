@@ -54,6 +54,11 @@
 	  gap: 1em;
 	  width: 100%;
 	  line-height: 1.5em;
+
+	  ul {
+		@include flex(column);
+		gap: 1em;
+	  }
 	}
   }
 }
