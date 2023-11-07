@@ -22,7 +22,7 @@ function setup(): void {
 add_action('wp_enqueue_scripts', ns('scripts'));
 function scripts(): void {
 	$version = Package::getInstance()['version'];
-	wp_enqueue_style(ns('style'), get_stylesheet_uri(), [], $version);
+	wp_enqueue_style(ns('global-style'), resolve_url('assets/css/global.css'), [], $version);
 
 	wp_dequeue_style('wp-block-library');
 	wp_dequeue_style('wp-block-library-theme');

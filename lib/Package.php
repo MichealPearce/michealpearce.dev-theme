@@ -16,7 +16,7 @@ class Package implements ArrayAccess {
 	private array $data;
 
 	private function __construct() {
-		$pkg_path = resolvePath('/package.json');
+		$pkg_path = resolve_path('/package.json');
 		$this->data = json_decode(file_get_contents($pkg_path), true);
 	}
 

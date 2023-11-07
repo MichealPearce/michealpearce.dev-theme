@@ -6,12 +6,12 @@ function ns(string $name): string {
 	return "MichealPearce\\Theme\\$name";
 }
 
-function resolvePath(string $path): string {
+function resolve_path(string $path): string {
 	if (!str_starts_with($path, '/')) $path = "/$path";
 	return MICHEALPEARCEDEV_THEME_PATH . $path;
 }
 
-function resolveURL(string $path): string {
+function resolve_url(string $path): string {
 	if (!str_starts_with($path, '/')) $path = "/$path";
 	return get_template_directory_uri() . $path;
 }
@@ -22,7 +22,7 @@ function template(string $slug, array $vars = []): void {
 	$old_vars = $template_vars;
 	$template_vars = $vars;
 
-	require resolvePath("template-parts/$slug.php");
+	require resolve_path("template-parts/$slug.php");
 
 	$template_vars = $old_vars;
 }
