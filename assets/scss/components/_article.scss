@@ -24,6 +24,31 @@
 	width: 100%;
 	gap: 1em;
 
+	.article-meta {
+	  @include flex(row, space-between, center);
+	  width: 100%;
+	  gap: 1em;
+	  flex-wrap: wrap;
+
+	  .article-date {
+		white-space: nowrap;
+	  }
+
+	  .article-tags {
+		@include flex(row, flex-start, center);
+		gap: 1em;
+		flex-wrap: wrap;
+
+		.article-tag {
+		  display: inline-block;
+		  padding: 0.5em 0.75em;
+		  background-color: var(--color-black);
+		  color: var(--color-white);
+		  border-radius: var(--border-radius);
+		}
+	  }
+	}
+
 	.article-body {
 	  @include flex(column);
 	  gap: 1em;
