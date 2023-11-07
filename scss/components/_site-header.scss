@@ -6,6 +6,10 @@
   .site-title {
 	text-decoration: none;
 	text-align: center;
+
+	&:visited {
+	  color: inherit;
+	}
   }
 
   .site-navigation {

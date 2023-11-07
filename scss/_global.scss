@@ -27,6 +27,18 @@ html, body {
   color: var(--color-black);
 }
 
+a {
+  color: inherit;
+
+  &:visited {
+	color: red;
+  }
+
+  &:hover {
+	color: blue;
+  }
+}
+
 ul {
   list-style: disc;
   padding-left: 1.5em;
