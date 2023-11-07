@@ -12,6 +12,20 @@ use function MichealPearce\Theme\template;
 		content="width=device-width, initial-scale=1"
 	/>
 
+	<?php if (is_single() && is_array(get_the_tags()) && count(get_the_tags()) > 0):
+		$tags = array_reduce(get_the_tags(), function ($acc, $tag) {
+			$acc[] = $tag->name;
+			return $acc;
+		}, []);
+		$tags = implode(', ', $tags);
+		?>
+
+		<meta
+			name="keywords"
+			content="<?= $tags ?>"
+		>
+	<?php endif; ?>
+
 	<link
 		rel="preconnect"
 		href="https://fonts.googleapis.com"
