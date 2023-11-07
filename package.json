@@ -6,7 +6,10 @@
 	"dev:sass": "sass --load-path=scss --watch style.scss:style.css scss:css",
 	"dev:lib": "nodemon",
 	"dev": "run-p dev:sass dev:lib",
-	"build": "sass --no-source-map --style=compressed --load-path=scss style.scss:style.css scss:css"
+	"build:sass": "sass --no-source-map --style=compressed --load-path=scss style.scss:style.css scss:css",
+	"build:lib": "composer dump-autoload --optimize",
+	"build": "run-s build:sass build:lib",
+	"pull:update": "git pull && composer install && yarn install && yarn build"
   },
   "nodemonConfig": {
 	"exec": "composer dump-autoload",
