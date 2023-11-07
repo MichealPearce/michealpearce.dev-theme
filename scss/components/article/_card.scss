@@ -1,6 +1,7 @@
 .article-card {
   @include flex(column);
   gap: 1em;
+  width: 100%;
   max-width: 800px;
   padding: 1em;
   border: 1px solid var(--color-black);

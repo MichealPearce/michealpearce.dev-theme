@@ -4,9 +4,16 @@ use function MichealPearce\Theme\template;
 
 ?>
 <header class="site-header">
-	<?php template('link', [
-		'to' => get_home_url(),
-		'label' => get_bloginfo('name'),
-		'class' => 'h1 site-title'
-	]) ?>
+	<a
+		href="<?= get_home_url() ?>"
+		class="site-title link"
+	>
+		<div class="h1">
+			<?= get_bloginfo('name') ?>
+		</div>
+
+		<div class="h2">
+			<?= get_bloginfo('description') ?>
+		</div>
+	</a>
 </header>
