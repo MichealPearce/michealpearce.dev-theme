@@ -1,6 +1,6 @@
 {
   "name": "michealpearcecdev",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "packageManager": "yarn@4.0.1",
   "scripts": {
     "dev:sass": "sass --load-path=scss --watch style.scss:style.css scss:css",
