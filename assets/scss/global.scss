@@ -2,16 +2,16 @@
 @import 'reset';
 
 :root {
-  --color-white: white;
-  --color-black: #212121;
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
 
   --border-radius: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-	--color-white: #212121;
-	--color-black: white;
+	--color-white: #{$color-black};
+	--color-black: #{$color-white};
   }
 }
 
@@ -46,8 +46,8 @@ ul {
 
 p code {
   display: inline-block;
-  background-color: #eee;
-  color: black;
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: 0.1em 0.3em;
   border-radius: var(--border-radius);
 }
