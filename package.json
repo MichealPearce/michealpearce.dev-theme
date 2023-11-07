@@ -6,7 +6,7 @@
 	"dev:sass": "sass --load-path=scss --watch style.scss:style.css scss:css",
 	"dev:lib": "nodemon",
 	"dev": "run-p dev:sass dev:lib",
-	"build": "sass --no-source-map --style=compressed --load-path=scss scss:css"
+	"build": "sass --no-source-map --style=compressed --load-path=scss style.scss:style.css scss:css"
   },
   "nodemonConfig": {
 	"exec": "composer dump-autoload",
